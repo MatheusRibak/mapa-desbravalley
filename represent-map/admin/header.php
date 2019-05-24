@@ -28,8 +28,8 @@ if($page != "login") {
 }
 
 // connect to db
-mysql_connect($db_host, $db_user, $db_pass) or die(mysql_error());
-mysql_select_db($db_name) or die(mysql_error());
+mysql_connect('localhost', 'root', '') or die(mysql_error());
+mysql_select_db('mapa') or die(mysql_error());
 
 // get marker totals
 $total_approved = mysql_num_rows(mysql_query("SELECT id FROM places WHERE approved='1'"));
