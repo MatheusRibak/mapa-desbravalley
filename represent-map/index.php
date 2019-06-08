@@ -424,16 +424,18 @@ include "header.php";
   <div id="map_canvas"></div>
 
   <!-- topbar -->
+  <!-- 
   <div class="topbar" id="topbar">
     <div class="wrapper">
       <div class="right">
         <div class="buttons">
-
-
+ -->
+<!--
           <a href="#modal_add" target="_blank" class="btn btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Cadastre-se</a>
 
           <a href="#modal_info" class="btn btn-large btn-info" data-toggle="modal"><i class="icon-info-sign icon-white"></i>Sobre o Mapa</a>
-
+ --> 
+ <!-- 
         </div>
         <div class="share">
           <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?= $domain ?>" data-text="<?= $twitter['share_text'] ?>" data-count="none">Tweet</a>
@@ -457,13 +459,15 @@ include "header.php";
             <img src="images/logo_.png" alt="" />
           </a>
         </div>
-
+ -->
         <!--   <div class="search"> -->
         <!-- <input type="text" name="search" id="search" placeholder="Procure uma Empresa..." data-provide="typeahead" autocomplete="off" /> -->
         <!--  </div> -->
-      </div>
+      
+      <!--</div>
     </div>
   </div>
+  --> 
 
   <!-- right-side gutter -->
   <div class="menu" id="menu">

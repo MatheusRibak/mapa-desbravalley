@@ -113,10 +113,10 @@ $attribution = "
 ";
 
 // add startup genome to attribution if integration enabled
-if($sg_enabled) {
-  $attribution .= "
-    <br /><br />
-    Desenvolvido por <a target='_blank' href='https://www.matheusribak.com.br'>Matheus Ribak</a>
-  ";
-}
+//if($sg_enabled) {
+//  $attribution .= "
+//    <br /><br />
+//   Desenvolvido por <a target='_blank' href='https://www.matheusribak.com.br'>Matheus Ribak</a>
+ // ";
+//}
 ?>
