@@ -17,8 +17,7 @@
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700' rel='stylesheet'
         type='text/css'>
-    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" href="map.css?nocache=289671982568" type="text/css" />
     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" />
     <script src="./scripts/jquery-1.7.1.js" type="text/javascript" charset="utf-8"></script>
@@ -31,6 +30,43 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6htqPkYiH2dKVcyOPI32UVaQMyKumDzs&callback=initMap"
         type="text/javascript"></script>
     <script type="text/javascript" src="./scripts/label.js"></script>
+
+    <style>
+        li {
+            line-height: 18px;
+        }
+
+        ul {
+            list-style: disc;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 18px;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        a {
+            color: #0088cc;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 100%;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+        }
+    </style>
 
     <script type="text/javascript">
         var map;
@@ -145,9 +181,9 @@
 
             // set map options
             var myOptions = {
-                zoom: 7,
+                zoom: 8,
                 //minZoom: 10,
-                center: new google.maps.LatLng(-26.8795318, -53.2834901),
+                center: new google.maps.LatLng(-27.0755519, -52.715843),
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 streetViewControl: false,
                 mapTypeControl: false,
