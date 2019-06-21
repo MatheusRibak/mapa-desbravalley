@@ -21,10 +21,9 @@
     <link rel="stylesheet" href="map.css?nocache=289671982568" type="text/css" />
     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" />
     <script src="./scripts/jquery-1.7.1.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./bootstrap/js/bootstrap-typeahead.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6htqPkYiH2dKVcyOPI32UVaQMyKumDzs&callback=initMap"
@@ -216,10 +215,6 @@
             // markers array: name, type (icon), lat, long, description, uri, address
             markers = new Array();
 
-
-
-
-
             // add markers
             jQuery.each(markers, function (i, val) {
                 infowindow = new google.maps.InfoWindow({
@@ -240,7 +235,7 @@
                 }
 
                 // build this marker
-                var markerImage = new google.maps.MarkerImage("./images/icons/" + val[1] + ".png", null, null, null, iconSize);
+                var markerImage = new google.maps.MarkerImage("./images/icones/" + val[1] + ".png", null, null, null, iconSize);
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(val[2], val[3]),
                     map: map,
@@ -319,9 +314,13 @@
 
         // zoom to specific marker
         function goToMarker(marker_id) {
+
             if (marker_id) {
+
                 map.panTo(gmarkers[marker_id].getPosition());
+
                 map.setZoom(15);
+
                 google.maps.event.trigger(gmarkers[marker_id], 'click');
             }
         }
@@ -383,48 +382,38 @@
     <div class="menu" id="menu">
         <ul class="list" id="list">
 
+
+            <!--
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('startup')" id='filter_startup'></div>
-                    <a href='#' onClick="toggleList('startup');" class='category_info'><img
-                            src='./images/icons/startup.png' alt='' />Startups<span class='total'> (0)</span></a>
-                </div>
-                <ul class='list-items list-startup'>
-
-                </ul>
-            </li>
-
-            <li class='category'>
-                <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('accelerator')" id='filter_accelerator'></div>
-                    <a href='#' onClick="toggleList('accelerator');" class='category_info'><img
-                            src='./images/icons/accelerator.png' alt='' />Aceleradoras<span class='total'>
+                    <div class='category_toggle' onClick="toggle('aceleradora')" id='filter_aceleradora'></div>
+                    <a href='#' onClick="toggleList('aceleradora');" class='category_info'><img
+                            src='./images/icones/aceleradora.png' alt='' />Aceleradora<span class='total'>
                             (0)</span></a>
                 </div>
-                <ul class='list-items list-accelerator'>
+                <ul class='list-items list-aceleradora'>
 
                 </ul>
-            </li>
-
+            </li> -->
+            <!--
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('incubator')" id='filter_incubator'></div>
-                    <a href='#' onClick="toggleList('incubator');" class='category_info'><img
-                            src='./images/icons/incubator.png' alt='' />Incubadoras<span class='total'> (0)</span></a>
+                    <div class='category_toggle' onClick="toggle('agencia_de_fomento')" id='filter_agencia_de_fomento'>
+                    </div>
+                    <a href='#' onClick="toggleList('agencia_de_fomento');" class='category_info'><img
+                            src='./images/icones/agencia_fomento.png' alt='' />Agência de fomento<span class='total'>
+                            (0)</span></a>
                 </div>
-                <ul class='list-items list-incubator '>
-
-
-
+                <ul class='list-items list-agencia_de_fomento'>
 
                 </ul>
             </li>
-
+-->
             <li class='category'>
                 <div class='category_item'>
                     <div class='category_toggle' onClick="toggle('coworking')" id='filter_coworking'></div>
                     <a href='#' onClick="toggleList('coworking');" class='category_info'><img
-                            src='./images/icons/coworking.png' alt='' />Coworking<span class='total'> (0)</span></a>
+                            src='./images/icones/coworking.png' alt='' />Coworking<span class='total'> (0)</span></a>
                 </div>
                 <ul class='list-items list-coworking'>
 
@@ -433,25 +422,154 @@
 
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('investor')" id='filter_investor'></div>
-                    <a href='#' onClick="toggleList('investor');" class='category_info'><img
-                            src='./images/icons/investor.png' alt='' />Investidores<span class='total'> (0)</span></a>
+                    <div class='category_toggle' onClick="toggle('consultoria')" id='filter_consultoria'></div>
+                    <a href='#' onClick="toggleList('consultoria');" class='category_info'><img
+                            src='./images/icones/consultoria.png' alt='' />Consultoria<span class='total'>
+                            (0)</span></a>
                 </div>
-                <ul class='list-items list-investor'>
+                <ul class='list-items list-consultoria'>
+
+                </ul>
+            </li>
+            <!--
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('fundacao_de_apoio')" id='filter_fundacao_de_apoio'>
+                    </div>
+                    <a href='#' onClick="toggleList('fundacao_de_apoio');" class='category_info'><img
+                            src='./images/icones/fund_apoio.png' alt='' />Fundação de Apoio<span class='total'>
+                            (0)</span></a>
+                </div>
+                <ul class='list-items list-fundacao_de_apoio'>
+
+                </ul>
+            </li>-->
+
+
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('empresa')" id='filter_empresa'></div>
+                    <a href='#' onClick="toggleList('empresa');" class='category_info'><img
+                            src='./images/icones/empresas.png' alt='' />Empresa<span class='total'> (0)</span></a>
+                </div>
+                <ul class='list-items list-empresa'>
+
+                </ul>
+            </li>
+
+            <!--    <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('escola')" id='filter_escola'></div>
+                    <a href='#' onClick="toggleList('escola');" class='category_info'><img
+                            src='./images/icones/escola.png' alt='' />Escola<span class='total'> (0)</span></a>
+                </div>
+                <ul class='list-items list-escola'>
+
+                </ul>
+            </li>-->
+
+            <!--    <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('espaco_de_inovacao')" id='filter_espaco_de_inovacao'>
+                    </div>
+                    <a href='#' onClick="toggleList('espaco_de_inovacao');" class='category_info'><img
+                            src='./images/icones/espaço_inovacao.png' alt='' />Espaço de Inovação<span class='total'>
+                            (0)</span></a>
+                </div>
+                <ul class='list-items list-espaco_de_inovacao'>
+
+                </ul>
+            </li>-->
+
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('incubadora')" id='filter_incubadora'></div>
+                    <a href='#' onClick="toggleList('incubadora');" class='category_info'><img
+                            src='./images/icones/Incubadora.png' alt='' />Incubadora<span class='total'> (0)</span></a>
+                </div>
+                <ul class='list-items list-incubadora'>
 
                 </ul>
             </li>
 
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('service')" id='filter_service'></div>
-                    <a href='#' onClick="toggleList('service');" class='category_info'><img
-                            src='./images/icons/service.png' alt='' />Outros<span class='total'> (0)</span></a>
+                    <div class='category_toggle' onClick="toggle('investidor')" id='filter_investidor'></div>
+                    <a href='#' onClick="toggleList('investidor');" class='category_info'><img
+                            src='./images/icones/fundos_investimento.png' alt='' />Investidor<span class='total'>
+                            (0)</span></a>
                 </div>
-                <ul class='list-items list-service'>
+                <ul class='list-items list-investidor'>
 
                 </ul>
             </li>
+
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('inst_de_ensino_superior')"
+                        id='filter_inst_de_ensino_superior'></div>
+                    <a href='#' onClick="toggleList('inst_de_ensino_superior');" class='category_info'><img
+                            src='./images/icones/inst_ensino.png' alt='' />Inst. de Ensino Superior<span class='total'>
+                            (0)</span></a>
+                </div>
+                <ul class='list-items list-inst_de_ensino_superior'>
+
+                </ul>
+            </li>
+
+
+
+            <!--
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('parque_tecnologico')" id='filter_parque_tecnologico'>
+                    </div>
+                    <a href='#' onClick="toggleList('parque_tecnologico');" class='category_info'><img
+                            src='./images/icones/parque_tecnologico.png' alt='' />Parque tecnológico<span class='total'>
+                            (0)</span></a>
+                </div>
+                <ul class='list-items list-parque_tecnologico'>
+
+                </ul>
+            </li>
+-->
+            <!--  <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('pesquisador')" id='filter_pesquisador'></div>
+                    <a href='#' onClick="toggleList('pesquisador');" class='category_info'><img
+                            src='./images/icones/pesquisador.png' alt='' />Pesquisador<span class='total'>
+                            (0)</span></a>
+                </div>
+                <ul class='list-items list-pesquisador'>
+
+                </ul>
+            </li>-->
+
+
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('startup')" id='filter_startup'></div>
+                    <a href='#' onClick="toggleList('startup');" class='category_info'><img
+                            src='./images/icones/startup.png' alt='' />Startups<span class='total'> (0)</span></a>
+                </div>
+                <ul class='list-items list-startup'>
+
+                   
+                </ul>
+            </li>
+
+            <li class='category'>
+                <div class='category_item'>
+                    <div class='category_toggle' onClick="toggle('outros')" id='filter_outros'></div>
+                    <a href='#' onClick="toggleList('outros');" class='category_info'><img
+                            src='./images/icones/outros.png' alt='' />Outros<span class='total'> (0)</span></a>
+                </div>
+                <ul class='list-items list-outros'>
+
+                </ul>
+            </li>
+
+
             <li class="blurb">O objetivo deste mapa é promover a Comunidade Inovadora do Oeste de SC - Desbravalley.
                 Vamos colocar a região oeste no mapa!!!</li>
             <li class="attribution">
