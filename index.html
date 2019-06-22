@@ -215,6 +215,9 @@
             // markers array: name, type (icon), lat, long, description, uri, address
             markers = new Array();
 
+            markers.push(['123WeddingCards', 'empresas', '34.1924', '-118.323', '123WeddingCards is an exclusive online store for wedding invitations with beautiful designs, genuine wedding wordings, distinguished texture.', 'http://www.123weddingcards.com/', '1555 Scott Road, Apt 308, Burbank, CA 91504']);
+            markerTitles[0] = '123WeddingCards';
+
             // add markers
             jQuery.each(markers, function (i, val) {
                 infowindow = new google.maps.InfoWindow({
@@ -431,28 +434,32 @@
 
                 </ul>
             </li>
-            <!--
+
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('fundacao_de_apoio')" id='filter_fundacao_de_apoio'>
+                    <div class='category_toggle' onClick="toggle('fund_apoio')" id='filter_fund_apoio'>
                     </div>
-                    <a href='#' onClick="toggleList('fundacao_de_apoio');" class='category_info'><img
+                    <a href='#' onClick="toggleList('fund_apoio');" class='category_info'><img
                             src='./images/icones/fund_apoio.png' alt='' />Fundação de Apoio<span class='total'>
                             (0)</span></a>
                 </div>
-                <ul class='list-items list-fundacao_de_apoio'>
+                <ul class='list-items list-fund_apoio'>
 
                 </ul>
-            </li>-->
+            </li>
 
 
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('empresa')" id='filter_empresa'></div>
-                    <a href='#' onClick="toggleList('empresa');" class='category_info'><img
+                    <div class='category_toggle' onClick="toggle('empresas')" id='filter_empresas'></div>
+                    <a href='#' onClick="toggleList('empresas');" class='category_info'><img
                             src='./images/icones/empresas.png' alt='' />Empresa<span class='total'> (0)</span></a>
                 </div>
-                <ul class='list-items list-empresa'>
+                <ul class='list-items list-empresas'>
+                    <li class='empresas'>
+                        <a href='#' onMouseOver="markerListMouseOver('0')" onMouseOut="markerListMouseOut('0')"
+                            onClick="goToMarker('0');">123WeddingCards</a>
+                    </li>
 
                 </ul>
             </li>
@@ -483,43 +490,43 @@
 
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('incubadora')" id='filter_incubadora'></div>
-                    <a href='#' onClick="toggleList('incubadora');" class='category_info'><img
+                    <div class='category_toggle' onClick="toggle('Incubadora')" id='filter_Incubadora'></div>
+                    <a href='#' onClick="toggleList('Incubadora');" class='category_info'><img
                             src='./images/icones/Incubadora.png' alt='' />Incubadora<span class='total'> (0)</span></a>
                 </div>
-                <ul class='list-items list-incubadora'>
+                <ul class='list-items list-Incubadora'>
 
                 </ul>
             </li>
 
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('investidor')" id='filter_investidor'></div>
-                    <a href='#' onClick="toggleList('investidor');" class='category_info'><img
+                    <div class='category_toggle' onClick="toggle('fundos_investimento')"
+                        id='filter_fundos_investimento'></div>
+                    <a href='#' onClick="toggleList('fundos_investimento');" class='category_info'><img
                             src='./images/icones/fundos_investimento.png' alt='' />Investidor<span class='total'>
                             (0)</span></a>
                 </div>
-                <ul class='list-items list-investidor'>
+                <ul class='list-items list-fundos_investimento'>
 
                 </ul>
             </li>
 
             <li class='category'>
                 <div class='category_item'>
-                    <div class='category_toggle' onClick="toggle('inst_de_ensino_superior')"
-                        id='filter_inst_de_ensino_superior'></div>
-                    <a href='#' onClick="toggleList('inst_de_ensino_superior');" class='category_info'><img
+                    <div class='category_toggle' onClick="toggle('inst_ensino')" id='filter_inst_ensino'></div>
+                    <a href='#' onClick="toggleList('inst_ensino');" class='category_info'><img
                             src='./images/icones/inst_ensino.png' alt='' />Inst. de Ensino Superior<span class='total'>
                             (0)</span></a>
                 </div>
-                <ul class='list-items list-inst_de_ensino_superior'>
+                <ul class='list-items list-inst_ensino'>
 
                 </ul>
             </li>
 
 
 
-            <!--
+
             <li class='category'>
                 <div class='category_item'>
                     <div class='category_toggle' onClick="toggle('parque_tecnologico')" id='filter_parque_tecnologico'>
@@ -532,7 +539,7 @@
 
                 </ul>
             </li>
--->
+
             <!--  <li class='category'>
                 <div class='category_item'>
                     <div class='category_toggle' onClick="toggle('pesquisador')" id='filter_pesquisador'></div>
@@ -554,7 +561,7 @@
                 </div>
                 <ul class='list-items list-startup'>
 
-                   
+
                 </ul>
             </li>
 
